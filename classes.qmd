@@ -1,30 +1,217 @@
-# AO-Cat Classes 
+---
+title: AO-Cat Classes 
+subtitle: Appendix 1
+---
 
 ## AO_Entity
 
-**Subclass of:**  
+Subclass of:  
+: _None_
 
-**Superclass of:**  
-[`AO_Resource`](classes.qmd#ao_resource)  
-[`AO_Object`](classes.qmd#ao_object)  
-[`AO_Concept`](classes.qmd#ao_concept)  
-[`AO_Event`](classes.qmd#ao_event)  
-[`AO_Agent`](classes.qmd#ao_agent)  
-[`AO_Spatial_Region`](classes.qmd#ao_spatial_region)  
-[`AO_Temporal_Region`](classes.qmd#ao_temporal_region)  
+Superclass of:  
+: [`AO_Resource`](classes.qmd#ao_resource), 
+[`AO_Object`](classes.qmd#ao_object), 
+[`AO_Concept`](classes.qmd#ao_concept), 
+[`AO_Event`](classes.qmd#ao_event), 
+[`AO_Agent`](classes.qmd#ao_agent), 
+[`AO_Spatial_Region`](classes.qmd#ao_spatial_region), 
+[`AO_Temporal_Region`](classes.qmd#ao_temporal_region)
 
-**Scope Note:**  
-`AO_Entity` has as instances all entities in the ARIADNE infrastructure.
- 
-**Domain of:**  
-`has_identifier`  
-`has_type`  
-`has_title`  
-`has_description`  
+Scope Note:  
+: `AO_Entity` has as instances all entities in the ARIADNE infrastructure.
 
-**Maps to:**   
-`AO_Resource` is a subclass of `crm:E1_CRM_Entity`
+Domain of:  
+: [`has_identifier`](properties.qmd#has_identifier), 
+[`has_type`](properties.qmd#has_type), 
+[`has_title`](properties.qmd#has_title), 
+[`has_description`](properties.qmd#has_description)
+
+Maps to:  
+: `AO_Entity` corresponds to `crm:E1_CRM_Entity`.
 
 ## AO_Resource
 
-## AO_Data_Resource
+Subclass of:  
+: [`AO_Entity`](classes.qmd#ao_entity)
+
+Superclass of:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource), 
+[`AO_Service`](classes.qmd#ao_service)
+
+Scope Note:  
+: `AO_Resource` has as instances all archaeological resources that are represented in the ARIADNE Catalogue. 
+These resources are categorized into the following classes:  
+
+  - [`AO_Data_Resource`](classes.qmd#ao_data_resource), representing all types of digital data objects described in the Catalogue for discovery, access and integration. Two disjoint classes of data resources are further distinguished:  
+    - [`AO_Individual_Data_Resource`](classes.qmd#ao_individual_data_resource), including all data resources that are considered as not further decomposed; these include datasets, databases, GIS, and so on.  
+    - [`AO_Collection`](classes.qmd#ao_collection), representing aggregations of data resources considered as wholes, possibly including other collections.  
+  - [`AO_Service`](classes.qmd#ao_service), representing the services owned by the ARIADNE partners and, possibly, made available to other partners within the project on the ARIADNE infrastructure. This class is also suitable for describing new services created within the project.
+
+Examples:  
+: - [`AO_Data_Resource`](classes.qmd#ao_data_resource): A stratigraphic database, a collection of images from an excavation event, a report on the discovery of Roman burials in Provence.  
+- [`AO_Service`](classes.qmd#ao_service): The ARIADNE Visual Media service.
+
+Domain of:  
+: [`was_issued`](properties.qmd#was_issued), [`was_modified`](properties.qmd#was_modified), [`has_publisher`](properties.qmd#has_publisher), [`has_contributor`](properties.qmd#has_contributor), [`has_creator`](properties.qmd#has_creator), [`has_owner`](properties.qmd#has_owner), [`has_responsible`](properties.qmd#has_responsible), [`has_visual_component`](properties.qmd#has_visual_component)
+
+Maps to:  
+: `AO_Resource` is a subclass of `crm:E1_CRM_Entity`.
+
+<!-- TODO -->
+
+### AO_Data_Resource
+
+Subclass of:  
+: [`AO_Resource`](classes.qmd#ao_resource)
+
+Superclass of:  
+: [`AO_Collection`](classes.qmd#ao_collection), [`AO_Individual_Data_Resource`](classes.qmd#ao_individual_data_resource)
+
+Scope Note:  
+: This class specializes the [`AO_Resource`](classes.qmd#ao_resource) class and is intended to describe the digital resources of the ARIADNE RI that are data. The type of an instance of this class (e.g., GIS, database, collection) is specified through the [`has_type`](properties.qmd#has_type) property. This is an abstract class: its instances are all and only the instances of its subclasses.
+
+Examples:  
+: A stratigraphic database, a collection of images from an excavation event, a report on the discovery of Roman burials in Provence
+
+Domain of:  
+: [`has_original_id`](properties.qmd#has_original_id), [`is_about`](properties.qmd#is_about), [`has_ARIADNE_subject`](properties.qmd#has_ariadne_subject), [`has_native_subject`](properties.qmd#has_native_subject), [`has_derived_subject`](properties.qmd#has_derived_subject), [`has_language`](properties.qmd#has_language), [`was_created_on`](properties.qmd#was_created_on), [`has_landing_page`](properties.qmd#has_landing_page), [`has_access_policy`](properties.qmd#has_access_policy), [`has_access_rights`](properties.qmd#has_access_rights), [`has_extent`](properties.qmd#has_extent), [`has_temporal_coverage`](properties.qmd#has_temporal_coverage), [`has_spatial_coverage`](properties.qmd#has_spatial_coverage)
+
+Maps to:  
+: `AO_Data_Resource` is a subclass of `crmpe:PE22_Persistent_Dataset` (which is a subclass of `crm:E73_Information_Object`) and a subclass of `crm:E33_Linguistic_Object`
+
+### AO_Individual_Data_Resource
+
+Subclass of:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource)
+
+Superclass of:  
+: [`AO_Document`](classes.qmd#ao_document)
+
+Scope Note:  
+: A specialization of [`AO_Data_Resource`](classes.qmd#ao_data_resource) whose instances are data resources that are atomic and not further decomposed within the ARIADNE RI. The complementary class is [`AO_Collection`](classes.qmd#ao_collection).
+
+Examples:  
+: An archaeological record. A dataset. An image.
+
+Maps to:  
+: Implicit subclass of `crmpe:PE22_Persistent_Dataset`
+
+### AO_Document
+
+Subclass of:  
+: [`AO_Individual_Data_Resource`](classes.qmd#ao_individual_data_resource)
+
+Superclass of:  
+: _None_
+
+Scope Note:  
+: A specialization of [`AO_Individual_Data_Resource`](classes.qmd#ao_individual_data_resource), with instances that are documents of interest to the ARIADNE RI.
+
+Examples:  
+: A grey literature report. A scientific journal issue.
+
+Maps to:  
+: Implicit subclass of `crmpe:PE22_Persistent_Dataset`
+
+### AO_Collection
+
+Subclass of:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource)
+
+Superclass of:  
+: _None_
+
+Scope Note:  
+: A specialization of [`AO_Data_Resource`](classes.qmd#ao_data_resource) whose instances are collections of archaeological resources. Collections may include other collections.
+
+Examples:  
+: A group of resources documenting an excavation, composed of a report, a stratigraphic database, and a collection of images.
+
+Domain of:  
+: [`has_part`](properties.qmd#has_part)
+
+Maps to:  
+: Implicit subclass of `crmpe:PE22_Persistent_Dataset`
+
+### AO_Service
+
+Subclass of:  
+: [`AO_Resource`](classes.qmd#ao_resource)
+
+Superclass of:  
+: _None_
+
+Scope Note:  
+: A specialization of [`AO_Resource`](classes.qmd#ao_resource) intended to describe services in the archaeological domain, such as standalone services, web services, front-office or back-office services. The type is specified via the [`has_type`](properties.qmd#has_type) property.
+
+Examples:  
+: The ARIADNE discovery service
+
+Domain of:  
+: [`is_accessible_at`](properties.qmd#is_accessible_at), [`has_functionality`](properties.qmd#has_functionality), [`has_consumed_media`](properties.qmd#has_consumed_media), [`has_produced_media`](properties.qmd#has_produced_media), [`has_consumed_format`](properties.qmd#has_consumed_format), [`has_produced_format`](properties.qmd#has_produced_format), [`has_supported_language`](properties.qmd#has_supported_language), [`has_technical_support`](properties.qmd#has_technical_support)
+
+Maps to:  
+: Equivalent to `crmpe:PE8_E-Service` (subclass of `crm:E7_Activity`)
+
+## AO_Object
+
+Subclass of:  
+: [`AO_Entity`](classes.qmd#ao_entity)
+
+Superclass of:  
+: _None_
+
+Scope Note:  
+: Instances of this class are physical objects of interest to the ARIADNE infrastructure.
+
+Examples:  
+: The walls of Troy
+
+Domain of:  
+: [`has_time_interval`](properties.qmd#has_time_interval), [`has_space_region`](properties.qmd#has_space_region), [`was_present_at`](properties.qmd#was_present_at)
+
+Maps to:  
+: Subclass of `crm:E18_Physical_Thing`
+
+## AO_Event
+
+Subclass of:  
+: [`AO_Entity`](classes.qmd#ao_entity)
+
+Superclass of:  
+: [`AO_Activity`](classes.qmd#ao_activity)
+
+Scope Note:  
+: Events of interest to the ARIADNE RI — changes of state in cultural, social or physical systems. The decision to model an event depends on documentation sufficiency.
+
+Usage Note:  
+: If an event is well-documented and relevant to ARIADNE, it should be explicitly represented; otherwise, knowledge should be embedded directly (e.g., use `dc:creator` rather than creating an event for the vase’s creation).
+
+Examples:  
+: The excavation of the walls of Troy; the eruption of Vesuvius that destroyed Pompeii
+
+Domain of:  
+: [`occurs_in`](properties.qmd#occurs_in), [`happens_during`](properties.qmd#happens_during), [`contains_event`](properties.qmd#contains_event)
+
+Maps to:  
+: Subclass of `crm:E5_Event`
+
+### AO_Activity
+
+Subclass of:  
+: [`AO_Event`](classes.qmd#ao_event)
+
+Superclass of:  
+: _None_
+
+Scope Note:  
+: A specialization of [`AO_Event`](classes.qmd#ao_event) including activities intentionally carried out by actors and resulting in changes to documented systems.
+
+Usage Note:  
+: Same as for [`AO_Event`](classes.qmd#ao_event)
+
+Examples:  
+: The excavation of the walls of Troy
+
+Maps to:  
+: Subclass of `crm:E7_Activity`

@@ -2,21 +2,45 @@ project:
   type: book
 
 book:
-  title: "AO-Cat Ontology"
+  title: "The AO-Cat Ontology"
+  subtitle: A web-friendly fork of the AO-Cat Ontology, version 1.2.2
+  date: 2025-07-10
+  version: 1.2.2
+  author: 
+    # - name: Achille Felicetti
+    #   orcid: 0000-0003-4733-3171
+    # - name: Carlo Meghini
+    # - name: Julian Richards
+    #   orcid: 0000-0003-3938-899X
+    # - name: Maria Theodoridou
+    #   orcid: 0000-0002-4623-9186
+    - name: Petr Pajdla
+      orcid: 0000-0001-7050-9572
+  doi: 10.5281/zenodo.15348438 # register new DOI and create proper links on Zenodo
+  license: CC BY
+  repo-url: https://github.com/petrpajdla/aocat
+  repo-actions: [edit, source, issue]
+  sidebar:
+    style: "docked"
+    logo: logo.png
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
-    - references.qmd
-  appendices:
-    - classes.qmd
-    - properties.qmd
+    - requirements.qmd
+    - matching.qmd
+    # - references.qmd
+    - part: Appendices
+      chapters:
+      - classes.qmd
+      - properties.qmd
+      - subjects.qmd
       
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: cosmo #lumen cosmo materia pulse zephyr
+    # reference-location: "document"
   pdf:
     documentclass: scrreprt
   epub:

@@ -1,4 +1,7 @@
-# AO-Cat Properties 
+---
+title: AO-Cat Properties 
+subtitle: Appendix 2
+---
 
 ::: {.callout-note}
 
@@ -8,714 +11,570 @@ Inverse properties are specified only for properties whose range is not a dataty
 
 ## has_identifier 
 
-**Domain:**  
-[`AO_Entity`](classes.qmd#ao_entity)
+Domain:  
+: [`AO_Entity`](classes.qmd#ao_entity)
 
-**Range:**  
-`xsd:string`
+Range:  
+: `xsd:string`
 
-## has_type 
+Subproperty of:  
+: *None*
 
-## has_title 
+Superproperty of:  
+: *None*
 
+Obligation:  
+: Optional
 
-------------------------------
+Scope Note:  
+: This property associates an ARIADNE entity with an identifier for that entity in some namespace other than the ARIADNE namespace (where the primary identifier of the entity belongs) and other than the provider's namespace (which is associated to data resources by property [`has_original_id`](properties.qmd#has_original_id)). 
+The range of this property is `xsd:string` for generality.
 
-# AO-Cat Properties
+Maps to:  
+: `has_identifier` is a shortcut of the fully developed path `crm:P1_is_identified_by` → `crm:E42_Identifier`
 
-## has_identifier
-
-**Domain:**  
-[`AO_Entity`](classes.qmd#ao_entity)
-
-**Range:**  
-`xsd:string`
-
-**Subproperty of:**  
-_None_
-
-**Superproperty of:**  
-_None_
-
-**Obligation:**  
-Optional
-
-**Scope Note:**  
-This property associates an ARIADNE entity with an identifier for that entity in some namespace other than the ARIADNE namespace (where the primary identifier of the entity belongs) and other than the provider's namespace (which is associated to data resources by property has_original_id). The range of this property is xsd:string for generality.
-
-**Maps to:**  
-has_identifier is a shortcut of the fully developed path  
-`crm:P1_is_identified_by → crm:E42_Identifier`
-
-**Hints:**  
-values of dct:identifier can be used to compute the ARIADNE identifier.
+Hints:  
+: Values of `dct:identifier` can be used to compute the ARIADNE identifier.
 
 ## has_type
 
-**Domain:**  
-[`AO_Entity`](classes.qmd#ao_entity)
+Domain:  
+: [`AO_Entity`](classes.qmd#ao_entity)
 
-**Range:**  
-[`AO_Concept`](classes.qmd#ao_concept)
+Range:  
+: [`AO_Concept`](classes.qmd#ao_concept)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_type_of`
+Inverse:  
+: `is_type_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-This property associates an ARIADNE Entity with a term from a controlled vocabulary.
+Scope Note:  
+: This property associates an ARIADNE Entity with a term from a controlled vocabulary.
 
-**Example:**  
-Event E has type "Rescue Excavation" (https://heritagedata.org/live/schemes/agl_et/concepts/145157.html)
+<!-- TODO -->
+Example:  
+: Event *E* has type *"Rescue Excavation"* (https://heritagedata.org/live/schemes/agl_et/concepts/145157.html).
 
-**Maps to:**  
-has_type is equivalent to crm:P2_has_type
+Maps to:  
+: `has_type` is equivalent to `crm:P2_has_type`.
 
-**Hints:**  
-this property is a sub-property of dct:type
+Hints:  
+: This property is a subproperty of `dct:type`.
 
 ## has_title
 
-**Domain:**  
-[`AO_Entity`](classes.qmd#ao_entity)
+Domain:  
+: [`AO_Entity`](classes.qmd#ao_entity)
 
-**Range:**  
-`rdfs:Literal`
+Range:  
+: `rdfs:Literal`
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Obligation:**  
-Mandatory with multiple instances (related to language, we may have one title for each relevant language). It is strongly suggested to use literals with a language tag for each provided title, such as "La bella addormentata"@it.
+Obligation:  
+: Mandatory with multiple instances (related to language, we may have one title for each relevant language). 
+It is strongly suggested to use literals with a language tag for each provided title, such as `"La bella addormentata"@it`.
 
-**Scope Note:**  
-This property associates an AO Entity with one title identifying the resource in a specific language. A resource may have more that one title, but they must all be in different languages.
+Scope Note:  
+: This property associates an `AO_Entity` with one title identifying the resource in a specific language. 
+A resource may have more that one title, but they must all be in different languages.
 
-**Maps to:**  
-has_title is a shortcut of the fully developed path  
-`crm:P102_has_title → crm:E35_Title`
+Maps to:  
+: `has_title` is a shortcut of the fully developed path `crm:P102_has_title` → `crm:E35_Title`.
 
-**Hints:**  
-this property is a sub-property of dct:title
+Hints:  
+: This property is a subproperty of `dct:title`.
 
 ## has_description
 
-**Domain:**  
-[`AO_Entity`](classes.qmd#ao_entity)
+Domain:  
+: [`AO_Entity`](classes.qmd#ao_entity)
 
-**Range:**  
-`xsd:string`
+Range:  
+: `xsd:string`
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Obligation:**  
-Desirable
+Obligation:  
+: Desirable
 
-**Scope Note:**  
-This property associates an ARIADNE entity with a free text description of that entity.
+Scope Note:  
+: This property associates an ARIADNE entity with a free text description of that entity.
 
-**Maps to:**  
-This property is a subproperty of crm:P3_has_note
+Maps to:  
+: This property is a subproperty of `crm:P3_has_note`.
 
-**Hints:**  
-this property is a sub-property of dct:description and of rdfs:comment
+Hints:  
+: This property is a subproperty of `dct:description` and of `rdfs:comment`.
 
 ## was_issued
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-`xsd:dateTime`
+Range:  
+: `xsd:dateTime`
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-This property associates an ARIADNE resource with the date of formal issuance (e.g., publication) of the resource by the publisher.
+Scope Note:  
+: This property associates an ARIADNE resource with the date of formal issuance (e.g., publication) of the resource by the publisher.
 
-**Maps to:**  
-This property is a shortcut of the fully developed path  
-`→L10i→D7[10]→P4→E52→P81→XSD:DateTime`  
-`→L10i→D7[10]→P2→E55["Issuance"]`
+Maps to:  
+: This property is a shortcut of the fully developed path  
+`L10i` → `D7[10]` → `P4` → `E52` → `P81` → `xsd:DateTime`,  
+`L10i` → `D7[10]` → `P2` → `E55["Issuance"]`.
 
 ## was_modified
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-`xsd:dateTime`
+Range:  
+: `xsd:dateTime`
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-This property associates an ARIADNE resource with the most recent date on which the resource was modified by the publisher.
+Scope Note:  
+: This property associates an ARIADNE resource with the most recent date on which the resource was modified by the publisher.
 
-**Maps to:**  
-It is assumed that the Modification is a new creation and the resource is the resulting output of the new Digital Machine Event. Therefore, this property is interpreted as a shortcut of the fully developed path  
-`→L11i_was_output_of→D7[11]_Digital_Machine_Event→P4_has_time-span→E52_Time-Span→P82_at_some_time_within→xsd:date`  
-`→L11i_was_output_of→D7[11]_Digital_Machine_Event→P2_has_type→E55_Type["Modification"]`
+Maps to:  
+: It is assumed that the *Modification* is a new creation and the resource is the resulting output of the new *Digital Machine Event*.
+Therefore, this property is interpreted as a shortcut of the fully developed path  
+`L11i_was_output_of` → `D7[11]_Digital_Machine_Event` → `P4_has_time-span` → `E52_Time-Span` → `P82_at_some_time_within` → `xsd:date`,  
+`L11i_was_output_of` → `D7[11]_Digital_Machine_Event` → `P2_has_type` → `E55_Type["Modification"]`.
 
 ## has_part
 
-**Domain:**  
-[`AO_Collection`](classes.qmd#ao_collection)
+Domain:  
+: [`AO_Collection`](classes.qmd#ao_collection)
 
-**Range:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
+Range:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_part_of`
+Inverse:  
+: `is_part_of`
 
-**Obligation:**  
-Desirable
+Obligation:  
+: Desirable
 
-**Scope Note:**  
-Associates an ARIADNE collection with a AO_Data_Resource resource that the collection contains. The relation between a collection in its members must be a tree having the collection as its root and any finite depth, due to the fact that a collection may have another collection as a member.
+Scope Note:  
+: Associates an ARIADNE collection with a `AO_Data_Resource` resource that the collection contains. 
+The relation between a collection in its members must be a tree having the collection as its root and any finite depth, due to the fact that a collection may have another collection as a member.
 
-**Maps to:**  
-This property is equivalent to crmpe:PP20_has_persistent_dataset_part which is a subproperty of crm:P106_is_composed_of but it restricts the domain to Collections only. It doesn't apply for AO_Data_Resource and AO_Individual_Data_Resource.
+Maps to:  
+: This property is equivalent to `crmpe:PP20_has_persistent_dataset_part` which is a subproperty of `crm:P106_is_composed_of` but it restricts the domain to *Collections* only. 
+It doesn't apply for [`AO_Data_Resource`](classes.qmd#ao_data_resource) and [`AO_Individual_Data_Resource`](classes.qmd#ao_individual_data_resource).
 
-**Hints:**  
-This property is a sub-property of dct:hasPart
+Hints:  
+: This property is a subproperty of `dct:hasPart`
 
 ## has_publisher
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-[`AO_Agent`](classes.qmd#ao_agent)
+Range:  
+: [`AO_Agent`](classes.qmd#ao_agent)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_publisher_of`
+Inverse:  
+: `is_publisher_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-Associates any ARIADNE resource with an agent responsible for making the resource publicly accessible (via download, or API, or other).
+Scope Note:  
+: Associates any ARIADNE resource with an agent responsible for making the resource publicly accessible (via download, or API, or other).
 
-**Maps to:**  
-This property is a shortcut of the fully developed paths  
-`→L10i_was_input_of→D7[12]_Digital_Machine_event→P01i_is_domain_of→PC14_carried_out_by→P02_has_range→E39_Actor`  
-`→L10i_was_input_of→D7[12]→P01i_is_domain_of→PC14_carried_out_by→P14.1_in_the_role_of→E55["Publisher"]`  
-`→L10i_was_input_of→D7[12]_Digital_Machine_event→P2_has_type→E55_Type["Ariadne Content Provision"]`
+Maps to:  
+: This property is a shortcut of the fully developed paths   
+`L10i_was_input_of` → `D7[12]_Digital_Machine_event` → `P01i_is_domain_of` → `PC14_carried_out_by` → `P02_has_range` → `E39_Actor`,   
+`L10i_was_input_of` → `D7[12]` → `P01i_is_domain_of` → `PC14_carried_out_by` → `P14.1_in_the_role_of` → `E55["Publisher"]`,   
+`L10i_was_input_of` → `D7[12]_Digital_Machine_event` → `P2_has_type` → `E55_Type["Ariadne Content Provision"]`.  
 
-**Hints:**  
-This property is a sub-property of dct:publisher
+Hints:  
+: This property is a subproperty of `dct:publisher`
 
 ## has_contributor
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-[`AO_Agent`](classes.qmd#ao_agent)
+Range:  
+: [`AO_Agent`](classes.qmd#ao_agent)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_contributor_of`
+Inverse:  
+: `is_contributor_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-Associates any ARIADNE resource with an agent primarily responsible for contributing the description of the resource to the ARIADNE Content Cloud.
+Scope Note:  
+: Associates any ARIADNE resource with an agent primarily responsible for contributing the description of the resource to the ARIADNE Content Cloud.
 
-**Maps to:**  
-This property is a shortcut of the fully developed paths  
-`→P94i_was_created_by→E65[13]Creation→P01i_is_domain_of→PC14_carried_out_by→P02_has_range→E39_Actor`  
-`→P94i_was_created_by→E65[13]Creation→P01i_is_domain_of→PC14_carried_out_by→P14.1_in_the_role_of→E55["Contributor"]`  
-`→P94i_was_created_by→E65[13]Creation→P2_has_type→E55_Type["Ariadne Content Creation"]`
+Maps to:  
+: This property is a shortcut of the fully developed paths  
+`P94i_was_created_by` → `E65[13]Creation` → `P01i_is_domain_of` → `PC14_carried_out_by` → `P02_has_range` → `E39_Actor`,  
+`P94i_was_created_by` → `E65[13]Creation` → `P01i_is_domain_of` → `PC14_carried_out_by` → `P14.1_in_the_role_of` → `E55["Contributor"]`,  
+`P94i_was_created_by` → `E65[13]Creation` → `P2_has_type` → `E55_Type["Ariadne Content Creation"]`.
 
-**Hints:**  
-This property is a sub-property of dct:contributor
+Hints:  
+: This property is a subproperty of `dct:contributor`
 
 ## has_creator
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-[`AO_Agent`](classes.qmd#ao_agent)
+Range:  
+: [`AO_Agent`](classes.qmd#ao_agent)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_creator_of`
+Inverse:  
+: `is_creator_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-Associates any ARIADNE resource with an agent primarily responsible for creating the resource.
+Scope Note:  
+: Associates any ARIADNE resource with an agent primarily responsible for creating the resource.
 
-**Maps to:**  
-This property is a shortcut of the fully developed paths  
-`→P94i_was_created_by→E65[13]Creation→P01i_is_domain_of→PC14_carried_out_by→P02_has_range→E39_Actor`  
-`→P94i_was_created_by→E65[13]Creation→P01i_is_domain_of→PC14_carried_out_by→P14.1_in_the_role_of→E55["Creator"]`  
-`→P94i_was_created_by→E65[13]Creation→P2_has_type→E55_Type["Ariadne Content Creation"]`
+Maps to:  
+: This property is a shortcut of the fully developed paths  
+`P94i_was_created_by` → `E65[13]Creation` → `P01i_is_domain_of` → `PC14_carried_out_by` → `P02_has_range` → `E39_Actor`,  
+`P94i_was_created_by` → `E65[13]Creation` → `P01i_is_domain_of` → `PC14_carried_out_by` → `P14.1_in_the_role_of` → `E55["Creator"]`,  
+`P94i_was_created_by` → `E65[13]Creation` → `P2_has_type` → `E55_Type["Ariadne Content Creation"]`.
 
-**Hints:**  
-This property is a sub-property of dct:creator
+Hints:  
+: This property is a subproperty of `dct:creator`.
 
 ## has_owner
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-[`AO_Agent`](classes.qmd#ao_agent)
+Range:  
+: [`AO_Agent`](classes.qmd#ao_agent)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_owner_of`
+Inverse:  
+: `is_owner_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-Associates any ARIADNE resource with the legal owner of the resource, who holds the legal responsibility.
+Scope Note:  
+: Associates any ARIADNE resource with the legal owner of the resource, who holds the legal responsibility.
 
-**Maps to:**  
-This property is a shortcut of the fully developed paths  
-`→P104_is_subject_to→E30_Right→P75i_is_possessed_by→E39_Actor`  
-`→P104_is_subject_to→E30_Right→P2_has_type→E55_Type["ownership"]`
+Maps to:  
+: This property is a shortcut of the fully developed paths  
+`P104_is_subject_to` → `E30_Right` → `P75i_is_possessed_by` → `E39_Actor`,  
+`P104_is_subject_to` → `E30_Right` → `P2_has_type` → `E55_Type["ownership"]`.
 
 ## has_responsible
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-[`AO_Agent`](classes.qmd#ao_agent)
+Range:  
+: [`AO_Agent`](classes.qmd#ao_agent)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_responsible_of`
+Inverse:  
+: `is_responsible_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-Associates any ARIADNE resource with an agent holding the scientific responsibility of the resource, such as the person or team who had enough competence and creativity to conceive the service or to gather the data on a field.
+Scope Note:  
+: Associates any ARIADNE resource with an agent holding the scientific responsibility of the resource, such as the person or team who had enough competence and creativity to conceive the service or to gather the data on a field.
 
-**Maps to:**  
-This property is a shortcut of the fully developed paths  
-`→L10i_was_input_of→D7[12]_Digital_Machine_event→P01i_is_domain_of→PC14_carried_out_by→P02_has_range→E39_Actor`  
-`→L10i_was_input_of→D7[12]→P01i_is_domain_of→PC14_carried_out_by→P14.1_in_the_role_of→E55["Scientific or Technical Responsible"]`  
-`→L10i_was_input_of→D7[12]_Digital_Machine_event→P2_has_type→E55_Type["Ariadne Content Provision"]`
+Maps to:  
+: This property is a shortcut of the fully developed paths  
+`L10i_was_input_of` → `D7[12]_Digital_Machine_event` → `P01i_is_domain_of` → `PC14_carried_out_by` → `P02_has_range` → `E39_Actor`,  
+`L10i_was_input_of` → `D7[12]` → `P01i_is_domain_of` → `PC14_carried_out_by` → `P14.1_in_the_role_of` → `E55["Scientific or Technical Responsible"]`,  
+`L10i_was_input_of` → `D7[12]_Digital_Machine_event` → `P2_has_type` → `E55_Type["Ariadne Content Provision"]`.
 
 ## has_visual_component
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-[`AO_Digital_Media`](classes.qmd#ao_digital_media)
+Range:  
+: [`AO_Digital_Media`](classes.qmd#ao_digital_media)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-`has_primary_visual_component`
+Superproperty of:  
+: [`has_primary_visual_component`](properties.qmd#has_primary_visual_component)
 
-**Inverse:**  
-`is_visual_component_of`
+Inverse:  
+: `is_visual_component_of`
 
-**Obligation:**  
-Optional
+Obligation:  
+: Optional
 
-**Scope Note:**  
-This property associates a resource with a digital media that gives some information about the resource.
+Scope Note:  
+: This property associates a resource with a digital media that gives some information about the resource.
 
-**Examples:**  
+<!-- TODO -->
+Examples: 
 (example given in Section 2.1 Adding visual items to AO-Cat descriptions)
 
-**Maps to:**  
-this property is a sub-property of crm:P106 is component of
+Maps to:  
+: This property is a subproperty of `crm:P106_is_component_of`.
 
 ## has_primary_visual_component
 
-**Domain:**  
-[`AO_Resource`](classes.qmd#ao_resource)
+Domain:  
+: [`AO_Resource`](classes.qmd#ao_resource)
 
-**Range:**  
-[`AO_Digital_Media`](classes.qmd#ao_digital_media)
+Range:  
+: [`AO_Digital_Media`](classes.qmd#ao_digital_media)
 
-**Subproperty of:**  
-`has_visual_component`
+Subproperty of:  
+: [`has_visual_component`](properties.qmd#has_visual_component)
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_primary_visual_component_of`
+Inverse:  
+: `is_primary_visual_component_of`
 
-**Obligation:**  
-Optional
+Obligation:  
+: Optional
 
-**Scope Note:**  
-This property associates a resource with a digital media that gives some information about the resource and that has to be preferred over other media associated to the same resource whenever a single media is required.
+Scope Note:  
+: This property associates a resource with a digital media that gives some information about the resource and that has to be preferred over other media associated to the same resource whenever a single media is required.
 
-**Examples:**  
-(example given in Section 2.1 Adding visual items to AO-Cat descriptions)
+Maps to:  
+: *None*
+
+Hints:
+: *None*
 
 ## has_original_id
 
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
+Domain:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource)
 
-**Range:**  
-`xsd:string`
+Range:  
+: `xsd:string`
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-This property associates a data resource with the local identifier of the resource supplied by the content provider.
+Scope Note:  
+: This property associates a data resource with the local identifier of the resource supplied by the content provider.
 
-**Maps to:**  
-has_original_id is a shortcut of the fully developed path  
-`crm:P1_is_identified_by → crm:E42_Identifier[1]→ crm:P2_has_type_→ crm:E55_Type["originalID"]`
+Maps to:  
+: `has_original_id` is a shortcut of the fully developed path `crm:P1_is_identified_by` → `crm:E42_Identifier[1]`→ `crm:P2_has_type_` → `crm:E55_Type["originalID"]`.
 
 ## refers_to
 
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
+Domain:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource)
 
-**Range:**  
-[`AO_Entity`](classes.qmd#ao_entity)
+Range:  
+: [`AO_Entity`](classes.qmd#ao_entity)
 
-**Subproperty of:**  
-_None_
+Subproperty of:  
+: *None*
 
-**Superproperty of:**  
-`is_about`
+Superproperty of:  
+: [`is_about`](properties.qmd#is_about)
 
-**Inverse:**  
-`is_referenced_by`
+Inverse:  
+: `is_referenced_by`
 
-**Obligation:**  
-Optional
+Obligation:  
+: Optional
 
-**Scope Note:**  
-This property associates a AO_Data_Resource to the AO_Entity(ies) the resource refers to
+Scope Note:  
+: This property associates a `AO_Data_Resource` to the `AO_Entity`(ies) the resource refers to.
 
-**Maps to:**  
-Subproperty of crm:P67_refers_to
+Maps to:  
+: Subproperty of `crm:P67_refers_to`.
 
-**Hints:**  
-This property is a sub-property of the inverse of dct:isReferencedBy
+Hints:  
+: This property is a subproperty of the inverse of `dct:isReferencedBy`.
 
 ## is_about
 
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
+Domain:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource)
 
-**Range:**  
-[`AO_Entity`](classes.qmd#ao_entity)
+Range:  
+: [`AO_Entity`](classes.qmd#ao_entity)
 
-**Subproperty of:**  
-`refers_to`
+Subproperty of:  
+: [`refers_to`](properties.qmd#refers_to)
 
-**Superproperty of:**  
-`has_ARIADNE_subject`, `has_native_subject`, `has_derived_subject`
+Superproperty of:  
+: [`has_ARIADNE_subject`](properties.qmd#has_ariadne_subject), 
+[`has_native_subject`](properties.qmd#has_native_subject), 
+[`has_derived_subject`](properties.qmd#has_derived_subject)
 
-**Inverse:**  
-`is_subject_of`
+Inverse:  
+: `is_subject_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-This property associates a AO_Data_Resource to the AO_Entity the resource is about.
+Scope Note:  
+: This property associates a `AO_Data_Resource` to the `AO_Entity` the resource is about.
 
-**Maps to:**  
-Subproperty of crm:P129_is_about
+Maps to:  
+: Subproperty of `crm:P129_is_about`.
 
-**Hints:**  
-This property is a sub-property of dc:subject
+Hints:  
+: This property is a subproperty of `dc:subject`.
 
 ## has_ARIADNE_subject
 
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
+Domain:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource)
 
-**Range:**  
-[`AO_Concept`](classes.qmd#ao_concept)
+Range:  
+: [`AO_Concept`](classes.qmd#ao_concept)
 
-**Subproperty of:**  
-`is_about`
+Subproperty of:  
+: `is_about`
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_ARIADNE_subject_of`
+Inverse:  
+: `is_ARIADNE_subject_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-This property associates a AO_Data_Resource with one the fundamental archaeological categories defined by ARIADNE. These are the high level "resource types", or semantic categories which are used in the ARIADNE portal to filter search results, e.g. "Site and monuments databases or inventories", "Event/intervention resources" etc.
+Scope Note:  
+: This property associates a `AO_Data_Resource` with one of the fundamental archaeological categories defined by ARIADNE. 
+These are the high level *resource types*, or semantic categories which are used in the ARIADNE portal to filter search results, e.g. *"Site and monuments databases or inventories"*, *"Event/intervention resources"* etc.
+<!-- TODO: Link na Appendix s listem Resource Types -->
 
-**Maps to:**  
-has_ARIADNE_subject is a shortcut of the fully developed path  
-`→P129_is_about→E55_Type→P2_has_type→E55_Type["Ariadne Subject"]`
+Maps to:  
+: `has_ARIADNE_subject` is a shortcut of the fully developed path `P129_is_about` → `E55_Type` → `P2_has_type` → `E55_Type["Ariadne Subject"]`.
 
-**Hints:**  
-This property is a sub-property of dc:subject
+Hints:  
+: This property is a subproperty of `dc:subject`.
 
 ## has_native_subject
 
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
+Domain:  
+: [`AO_Data_Resource`](classes.qmd#ao_data_resource)
 
-**Range:**  
-[`AO_Concept`](classes.qmd#ao_concept)
+Range:  
+: [`AO_Concept`](classes.qmd#ao_concept)
 
-**Subproperty of:**  
-`is_about`
+Subproperty of:  
+: [`is_about`](properties.qmd#is_about)
 
-**Superproperty of:**  
-_None_
+Superproperty of:  
+: *None*
 
-**Inverse:**  
-`is_native_subject_of`
+Inverse:  
+: `is_native_subject_of`
 
-**Obligation:**  
-Mandatory
+Obligation:  
+: Mandatory
 
-**Scope Note:**  
-This property associates a AO_Data_Resource with an original subject in the providing institution
+Scope Note:  
+: This property associates a `AO_Data_Resource` with an original subject in the providing institution.
 
-**Maps to:**  
-has_native_subject is a shortcut of the fully developed path  
-`→P129_is_about→E55_Type→P2_has_type→E55_Type["Native Subject"]`
+Maps to:  
+: `has_native_subject` is a shortcut of the fully developed path `P129_is_about` → `E55_Type` → `P2_has_type` → `E55_Type["Native Subject"]`.
 
-**Hints:**  
-This property is a sub-property of dc:subject
+Hints:  
+: This property is a subproperty of `dc:subject`.
 
-## has_derived_subject
 
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
 
-**Range:**  
-[`AO_Concept`](classes.qmd#ao_concept) (Getty AAT Term)
 
-**Subproperty of:**  
-`is_about`
 
-**Superproperty of:**  
-_None_
 
-**Inverse:**  
-`is_derived_subject_of`
+<!--
+-----------------------
 
-**Obligation:**  
-Mandatory (automatically computed by existing mapping to AAT)
+## Prefixes
 
-**Scope Note:**  
-This property associates a AO_Data_Resource with a subject automatically derived by mapping a native subject of the resource to a term in the Getty AAT vocabulary. The native subject may have the SKOS relations (skos:broadMatch, skos:closeMatch,skos:exactMatch,skos:narrowMatch, skos:relatedMatch) to the Getty AAT vocabulary.
+dc
+dct
+xsd
+crm
+crmpe
+rdfs
 
-**Maps to:**  
-has_derived_subject is a shortcut of the fully developed path  
-`→P129_is_about→E55_Type→P2_has_type→E55_Type["Derived Subject"]`
-
-**Hints:**  
-This property is a sub-property of dc:subject
-
-## has_language
-
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
-
-**Range:**  
-[`AO_Concept`](classes.qmd#ao_concept) (linked to lexvo.org)
-
-**Subproperty of:**  
-_None_
-
-**Superproperty of:**  
-_None_
-
-**Inverse:**  
-`is_language_of`
-
-**Obligation:**  
-Optional
-
-**Scope Note:**  
-This property is used to associate a data resource with the language of the resource, if any, specified according to a selected vocabulary.
-
-**Maps to:**  
-Equivalent to crm:P72_has_language
-
-**Hints:**  
-This property is a sub-property of dc:language and its range is a super-class of class lvont:Language
-
-## was_created_on
-
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
-
-**Range:**  
-`xsd:dateTime`
-
-**Subproperty of:**  
-_None_
-
-**Superproperty of:**  
-_None_
-
-**Obligation:**  
-Mandatory
-
-**Scope Note:**  
-This property is used to specify the creation date of the AO_Data_Resource. This is the date when the AO_Data_Resource was first made available online by the Publisher, (not the date of the fieldwork or laboratory analysis for instance). In some cases (e.g. where data or metadata did not already exist online) it will be the same date as the creation of the metadata for ARIADNE
-
-**Maps to:**  
-This property is a shortcut of the fully developed path  
-`→P94i_was_created_by→E65_Creation→P4_has_time-span→E52_Time-Span→P81_ongoing_throughout→xsd:date`
-
-**Hints:**  
-This property is a sub-property of dct:created (and consequently of dc:date)
-
-## has_landing_page
-
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
-
-**Range:**  
-`rdfs:Resource`
-
-**Subproperty of:**  
-_None_
-
-**Superproperty of:**  
-_None_
-
-**Obligation:**  
-Optional
-
-**Scope Note:**  
-This property is used to specify the original landing page of the AO_Data_Resource, if any.
-
-**Examples:**  
-The Archaeology Data Service has landing page e.g. http://archaeologydataservice.ac.uk/archsearch/record.jsf?titleId=104031 e.g. https://doi.org/10.5284/1052661
-
-**Maps to:**  
-This property is a shortcut of the fully developed path  
-`→PP8i_is_dataset_hosted_by→PE15_Data_E-Service→PP49_provides_access_point→PE29_Access_Point`
-
-## has_access_policy
-
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
-
-**Range:**  
-`rdfs:Resource`
-
-**Subproperty of:**  
-_None_
-
-**Superproperty of:**  
-_None_
-
-**Obligation:**  
-Desirable
-
-**Scope Note:**  
-This property is used to specify the URI to the statement of policy (typically, on an organization's website) for the data resource.
-
-**Examples:**  
-The DANS Organization has access policy as stated in http://dans.knaw.nl/en/about/organisation-and-policy/legal-information
-
-**Maps to:**  
-This property is a shortcut of the fully developed path  
-`→P104_is_subject_to→E30_Right→P2_has_type→E55_Type["Access Policy]`
-
-## has_access_rights
-
-**Domain:**  
-[`AO_Data_Resource`](classes.qmd#ao_data_resource)
-
-**Range:**  
-`xsd:string`
-
-**Subproperty of:**  
-_None_
-
-**Superproperty of:**  
-_None_
-
-**Obligation:**
+-->

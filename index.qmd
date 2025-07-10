@@ -1,5 +1,20 @@
 # Preface {.unnumbered}
 
+This is a *web-friendly* version of [*The AO-Cat Ontology*](https://www.doi.org/10.5281/zenodo.15348438), cite the original as:
+
+> Felicetti, A., Meghini, C., Richards, J., Theodoridou, M. 2025: *The AO-Cat Ontology*. Zenodo. doi: [10.5281/zenodo.15348438](https://www.doi.org/10.5281/zenodo.15348438)
+
+The original document is available under the [CC BY 4.0 Int.](https://creativecommons.org/licenses/by/4.0/) license.
+This allows to adapt the original material like this. 
+Full credit for the contents of *The AO-Cat Ontology* goes to the original authors, Achille Felicetti[^1], Carlo Meghini[^4], Julian Richards[^2], and Maria Theodoridou[^3]. 
+
+[^1]: *Polo Universitario Città di Prato* (PIN), ORCID: [0000-0003-4733-3171](https://orcid.org/0000-0003-4733-3171)
+[^4]: *Consiglio Nazionale delle Ricerche* (CNR)
+[^2]: *University of York, Archaeology Data Service* (ADS), ORCID: [0000-0003-3938-899X](https://orcid.org/0000-0003-3938-899X)
+[^3]: *Foundation for Research and Technology -- Hellas* (FORTH), ORCID: [0000-0002-4623-9186](https://orcid.org/0000-0002-4623-9186)
+
+
+
 This is a Quarto book.
 
 To learn more about Quarto books visit <https://quarto.org/docs/books>.

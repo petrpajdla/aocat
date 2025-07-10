@@ -1,0 +1,25 @@
+## AO_Entity
+
+Subclass of:
+: *None* 
+
+Superclass of: 
+: [`AO_Resource`](classes.qmd#ao_resource)  
+[`AO_Object`](classes.qmd#ao_object)  
+[`AO_Concept`](classes.qmd#ao_concept)  
+[`AO_Event`](classes.qmd#ao_event)  
+[`AO_Agent`](classes.qmd#ao_agent)  
+[`AO_Spatial_Region`](classes.qmd#ao_spatial_region)  
+[`AO_Temporal_Region`](classes.qmd#ao_temporal_region)  
+
+Scope Note: 
+: `AO_Entity` has as instances all entities in the ARIADNE infrastructure.
+ 
+Domain of: 
+: [`has_identifier`](properties.qmd#has_identifier)  
+[`has_type`](properties.qmd#has_type)  
+[`has_title`](properties.qmd#has_title)  
+[`has_description`](properties.qmd#has_description)
+
+Maps to:
+: `AO_Resource` is a subclass of `crm:E1_CRM_Entity`.
