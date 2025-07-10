@@ -1,0 +1,23 @@
+project:
+  type: book
+
+book:
+  title: "AO-Cat Ontology"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+  appendices:
+    - classes.qmd
+    - properties.qmd
+      
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+  epub:
+    cover-image: cover.png
