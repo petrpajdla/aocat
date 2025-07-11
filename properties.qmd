@@ -522,8 +522,7 @@ Obligation:
 
 Scope Note:  
 : This property associates a `AO_Data_Resource` with one of the fundamental archaeological categories defined by ARIADNE. 
-These are the high level *resource types*, or semantic categories which are used in the ARIADNE portal to filter search results, e.g. *"Site and monuments databases or inventories"*, *"Event/intervention resources"* etc.
-<!-- TODO: Link na Appendix s listem Resource Types -->
+These are the high level [*resource types*](subjects.qmd), or semantic categories which are used in the ARIADNE portal to filter search results, e.g. *"Site and monuments databases or inventories"*, *"Event/intervention resources"* etc.
 
 Maps to:  
 : `has_ARIADNE_subject` is a shortcut of the fully developed path `P129_is_about` → `E55_Type` → `P2_has_type` → `E55_Type["Ariadne Subject"]`.
